@@ -1,0 +1,162 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap'); */
+ 
+/* * { border: 1px solid red; } */
+:root {
+	/*box-sizing: border-box;*/
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    --text-primary: #212121;
+    --text-secondary: #616161;
+    --bg-primary: #fafafa;
+    --bg-secondary:#eeeeee;
+    --border-primary:  #bdbdbd; 
+    --orange-primary: #E8833A;
+    --orange-secondary: #F3C19D;
+    --transition-speed: 600ms;
+    --trans-cubic: cubic-bezier(0.18, 0.89, 0.32, 1.28) 0.9s; 
+    scroll-behavior: smooth;
+    overflow-x: hidden !important;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/Poppins-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/material-icons.woff2') format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+.order-list-items::-webkit-scrollbar, 
+body::-webkit-scrollbar {
+    width: 0.5rem; 
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #6649b8;
+}
+
+.text-bold {
+  font-weight: bolder !important;
+  font-size: 1.2em;
+}
+
+.justify-align { text-align: justify; }
+
+.disflex { display: flex; }
+
+.m-auto { margin: auto !important; }
+
+.w-100 { width: 100%; }
+
+body {
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  padding-left: 300px;
+}
+
+.sidenav {
+  /* transform: translateX(0%) !important; */
+  overflow: initial;
+}
+
+.sidenav, .sideTriggerBtn div {
+  background-color: white;
+}
+
+.sideTriggerBtn {
+  position: absolute;
+  top: 28vh;
+  right: -54px;
+  z-index: 10;
+}
+
+.sideTriggerBtn div {
+  border-radius: 0 40px 40px 0;
+  box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.14), 
+              3px 2px 5px 0 rgba(0, 0, 0, 0.12), 
+              3px 1px 5px 0 rgba(0, 0, 0, 0.2);
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  height: auto !important;
+  padding: 1rem 0;
+}
+
+.sideTriggerBtn a:hover {
+  box-shadow: -3px 3px 5px 0 rgba(0, 0, 0, 0.14), 
+              -3px 2px 5px 0 rgba(0, 0, 0, 0.12), 
+              -3px 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.sidenav .user-view { padding: 24px 24px; }
+
+.sidenav .collapsible-header { padding: 0 32px;}
+
+.sidenav .collapsible-body li a { padding: 0 0 0 55px; }
+
+
+.nav-select { background-color: #bdbdbd; }
+
+.sidenav li:hover { background-color: rgba(0,0,0,0.05); }
+
+#body-title { padding: 1.5rem; }
+
+#body-column { margin: 0 auto; }
+
+#data-covid .card { z-index: 0; }
+
+#data-covid .card-image { padding: 2rem; }
+
+.card-image .background {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+@media only screen and (max-width: 992px) {
+  :root { font-size: 14px; }
+
+  body { padding-left: 0px; }
+
+}
+
+@media only screen and (max-width: 600px) {
+  .center-on-small-only {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .sidenav { width: 250px; }
+}

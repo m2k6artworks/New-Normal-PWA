@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>My First PWA</title>
+  <meta name="description" content="My first PWA"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+  <link rel="stylesheet" href="css/materialize.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#b39ddb"/>
+</head>
+<body class="grey lighten-4">
+  <!-- Navigasi -->
+  <!-- <nav class="teal lighten-1" role="navigation">
+    <div class="nav-wrapper container">
+      <a href="/" class="brand-logo" id="logo-container">My App</a>
+      <a href="#" class="sidenav-trigger" data-target="nav-mobile">☰</a>
+      
+      <ul class="topnav right hide-on-med-and-down"></ul>
+      <ul id="nav-mobile" class="sidenav sidenav-fixed"></ul>
+    </div>
+  </nav> -->
+
+  <ul id="slide-out" class="sidenav sidenav-fixed"></ul>
+  <!-- Akhir Navigasi -->
+  <div id="body-title" class="container deep-purple-text"></div>
+  <hr>
+  <div class="row disflex">
+    <div id="body-column" class="col s12 l8">
+      <div class="card">
+        <div class="card-image">
+            <img id="body-card-image" class="materialboxed" src="" alt="">
+        </div>
+        <span id="body-card-content"></span>
+        <!-- <div class="card-image">
+          <img id="content-image2" class="materialboxed" src="images/negative.jpg" alt="social distancing">
+        </div> -->
+      </div>
+    </div>
+    <div id="data-covid" class="col l4 hide-on-med-and-down">
+      <div class="card">
+        <div class="card-image center white-text">
+          <div class="background deep-purple lighten-2"></div>
+          <h5>Update Kasus Covid19 Indonesia</h5>
+          <p class="tanggal">Per tanggal 13-10-2020</p>
+          <!-- <img class="materialboxed" src="images/new-normal.jpg"> -->
+        </div>
+        <div class="card-content justify-align">
+          <table>
+            <tbody>
+              <tr>
+                <th>Kasus</th>
+                <td class="totalCases">336.716</td>
+              </tr>
+              <tr>
+                <th>Sembuh</th>
+                <td class="recovered">258.519</td>
+              </tr>
+              <tr>
+                <th>Korban</th>
+                <td class="deaths">11.935</td>
+              </tr>
+                <tr>
+                <th>Kasus Aktif</th>
+                <td class="active">66.262</td>
+              </tr>
+              <tr>
+                <th>Total Test</th>
+                <td class="totalTests">3.802.093</td>
+              </tr>
+                      <tr>
+                <th>Kasus Hari ini</th>
+                <td class="todayCases">0</td>
+              </tr>
+              <tr>
+                <th>Korban Hari ini</th>
+                <td class="todayDeaths">0</td>
+              </tr>
+                      <tr>
+                <th>Kasus / 1 Juta</th>
+                <td class="casesPerMillion">1.227</td>
+              </tr>
+              <tr>
+                <th>Korban / 1 Juta</th>
+                <td class="deathsPerMillion">44</td>
+              </tr>
+                <tr>
+                <th>Test / 1 Juta</th>
+                <td class="testsPerMillion">13.859</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>  
+  <script src="js/materialize.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/nav.js"></script>
+  <script>
+    // REGISTER SERVICE WORKER
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function() {
+        navigator.serviceWorker
+          .register("/service-worker.js")
+          .then(function() {
+            console.log("Pendaftaran ServiceWorker berhasil");
+          })
+          .catch(function() {
+            console.log("Pendaftaran ServiceWorker gagal");
+          });
+      });
+    } else {
+      console.log("ServiceWorker belum didukung browser ini.");
+    }
+  </script>  
+</body>
+</html>
